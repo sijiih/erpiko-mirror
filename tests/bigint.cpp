@@ -7,11 +7,6 @@
 namespace Erpiko {
 
 SCENARIO("An empty BigInt can be created") {
-  GIVEN("A new empty BigInt") {
-    BigInt b;
-    REQUIRE_FALSE(&b == nullptr);
-  }
-
   GIVEN("A new empty BigInt pointer") {
     BigInt* b = new BigInt();
     REQUIRE_FALSE(b == nullptr);
