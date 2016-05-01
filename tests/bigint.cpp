@@ -20,7 +20,6 @@ SCENARIO("BigInt can be created from integer type") {
   GIVEN("A new BigInt") {
     BigInt b(1);
     THEN("It is not null") {
-      REQUIRE_FALSE(&b == nullptr);
       THEN("And it is the same with another big int created with the same integer") {
         BigInt b1(1);
         REQUIRE(b == b1);
