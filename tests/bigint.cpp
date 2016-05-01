@@ -33,7 +33,7 @@ SCENARIO("BigInt can be created from string") {
   GIVEN("A new BigInt") {
     BigInt* b = BigInt::fromString("120");
     THEN("It is not null") {
-      REQUIRE_FALSE(&b == nullptr);
+      REQUIRE_FALSE(b == nullptr);
       THEN("And it is the same with another big int created with the same hexstring") {
         BigInt b1(120);
         REQUIRE(*b == b1);
@@ -45,7 +45,7 @@ SCENARIO("BigInt can be created from string") {
   GIVEN("A new BigInt") {
     BigInt* b = BigInt::fromString("0x120");
     THEN("It is not null") {
-      REQUIRE_FALSE(&b == nullptr);
+      REQUIRE_FALSE(b == nullptr);
       THEN("And it is the same with another big int created with the same hexstring") {
         BigInt b1(0x120);
         REQUIRE(*b == b1);
@@ -68,7 +68,7 @@ SCENARIO("BigInt can be created from string") {
   GIVEN("A new BigInt") {
     BigInt* b = BigInt::fromString("0x120deadbeef");
     THEN("It is not null") {
-      REQUIRE_FALSE(&b == nullptr);
+      REQUIRE_FALSE(b == nullptr);
       auto str = b->toHexString();
       THEN("And the hex string should be correct") {
         REQUIRE(str == "0120DEADBEEF");
@@ -79,7 +79,7 @@ SCENARIO("BigInt can be created from string") {
   GIVEN("A new BigInt") {
     BigInt* b = BigInt::fromString("0x120");
     THEN("It has an initial value") {
-      REQUIRE_FALSE(&b == nullptr);
+      REQUIRE_FALSE(b == nullptr);
       BigInt b1(0x120);
       BigInt b2(0x260);
       REQUIRE(*b == b1);
@@ -100,10 +100,5 @@ SCENARIO("BigInt can be created from string") {
       }
     }
   }
-
-
-
 }
-
-
 } // namespace Erpiko
